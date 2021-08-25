@@ -1,0 +1,9 @@
+{
+    "serverList":[
+       {
+          "name" : "example",
+          "address" : "creative.techrock.org",
+          "port" : 19132
+       }
+    ]
+}

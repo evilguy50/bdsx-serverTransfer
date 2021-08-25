@@ -1,6 +1,6 @@
 {
   "name": "@bdsx/servertransfer",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "easy predefined server switching using bdsx",
   "main": "index.js",
   "keywords": [],

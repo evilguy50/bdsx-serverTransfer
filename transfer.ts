@@ -1,10 +1,19 @@
 import { command } from "bdsx/command";
 import { CxxString, int32_t } from "bdsx/nativetype";
-import { transferServer } from "../example_and_test/net-transferserver"
 import * as fs from 'fs';
+import { NetworkIdentifier } from "bdsx/bds/networkidentifier";
+import { TransferPacket } from "bdsx/bds/packets";
+
+export function transferServer(networkIdentifier:NetworkIdentifier, address:string, port:number):void {
+    const transferPacket = TransferPacket.create();
+    transferPacket.address = address;
+    transferPacket.port = port;
+    transferPacket.sendTo(networkIdentifier);
+    transferPacket.dispose();
+}
 
 command.register('server', 'transfer server').overload((param, origin, output)=>{
-    var serverFile = fs.readFileSync('../scripts/servers.json','utf8');
+    var serverFile = fs.readFileSync('./servers.json','utf8');
     var servers = JSON.parse(serverFile);
     let actor = origin.getEntity();
     var address: string

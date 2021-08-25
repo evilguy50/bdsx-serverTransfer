@@ -1,11 +1,11 @@
 {
-  "name": "@bdsx/serverTransfer",
+  "name": "@bdsx/servertransfer",
   "version": "1.0.0",
-  "description": "",
+  "description": "easy predefined server switching using bdsx",
   "main": "index.js",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "evilguy",
+  "license": "MIT",
   "bdsxPlugin": true,
   "scripts": {
     "prepare": "tsc || exit 0"
